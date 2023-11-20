@@ -11,8 +11,19 @@
 ## Logo
 ![logo](https://github.com/lucieplgnt/cocotons/assets/75979787/1ebf8903-bab9-4478-85e8-80d1d289208a)
 
-# Homepage design
-![image](https://github.com/lucieplgnt/cocotons/assets/75979787/09ed5117-64f0-43ab-b21b-87320da00e13)
+## Images test 
+![image](https://github.com/lucieplgnt/cocotons/assets/75979787/276d764d-52b3-4290-9a82-bcebfd7d074c)
+
+
+
+
+# Designs by pages
+
+## Homepage
+![image](https://github.com/lucieplgnt/cocotons/assets/75979787/21e4fef1-b9c7-4d26-a811-5d28c5c5db2f)
+
+##
+
 
 
 
