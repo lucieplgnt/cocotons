@@ -51,11 +51,11 @@
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star star-1"></i>
+                            <i class="fa-solid fa-star star-2"></i>
+                            <i class="fa-solid fa-star star-3"></i>
+                            <i class="fa-solid fa-star star-4"></i>
+                            <i class="fa-solid fa-star star-5"></i>
                         </div>
                     </div>
                 </div>
@@ -69,11 +69,11 @@
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star star-1"></i>
+                            <i class="fa-solid fa-star star-2"></i>
+                            <i class="fa-solid fa-star star-3"></i>
+                            <i class="fa-solid fa-star star-4"></i>
+                            <i class="fa-solid fa-star star-5"></i>
                         </div>
 
                     </div>
@@ -88,11 +88,11 @@
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star star-1"></i>
+                            <i class="fa-solid fa-star star-2"></i>
+                            <i class="fa-solid fa-star star-3"></i>
+                            <i class="fa-solid fa-star star-4"></i>
+                            <i class="fa-solid fa-star star-5"></i>
                         </div>
                     </div>
 
@@ -107,11 +107,11 @@
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star star-1"></i>
+                            <i class="fa-solid fa-star star-2"></i>
+                            <i class="fa-solid fa-star star-3"></i>
+                            <i class="fa-solid fa-star star-4"></i>
+                            <i class="fa-solid fa-star star-5"></i>
                         </div>
 
                     </div>
