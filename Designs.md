@@ -12,7 +12,7 @@
 ### Principal
 ![logo](https://github.com/lucieplgnt/cocotons/assets/75979787/1ebf8903-bab9-4478-85e8-80d1d289208a)
 ### Administration
-![image](https://github.com/lucieplgnt/cocotons/assets/75979787/7009ed9d-a0db-4be7-8c7e-c227a007ada0)
+![admin_cocotons](https://github.com/lucieplgnt/cocotons/assets/75979787/810958b8-ac9a-4dad-8526-6713604646f6)
 
 
 ## Images test 
