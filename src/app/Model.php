@@ -3,9 +3,9 @@
 abstract class Model {
     // Informations de la base de données
     private $host = "localhost";
-    private $db_name = "blog_mvc";
-    private $username = "root";
-    private $password = "root";
+    private $db_name = "db_cocotons";
+    private $username = "cocotons";
+    private $password = "cocotons";
 
     // Propriété qui contiendra l'instance de la connexion
     protected $_connexion;

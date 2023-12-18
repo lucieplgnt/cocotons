@@ -22,7 +22,7 @@ abstract class Controller {
 	 * @param array $data
 	 * @return void
 	 */
-	public function render(string $fichier, array $data = []){
+	public function render(string $fichier, array $data = [], bool $isBackoffice = false){
         extract($data);
 
         // On démarre le buffer de sortie ("ob_start" crée ce "buffer" et stocke tout le code de sortie généré)
@@ -35,7 +35,11 @@ abstract class Controller {
         $content = ob_get_clean();
 
         // On fabrique le "template"
-        require_once(ROOT.'views/layout/default.php');
+        if ($isBackoffice) {
+            require_once(ROOT.'views/layout/backoffice.php');
+        } else {
+            require_once(ROOT . 'views/layout/default.php');
+        }
     }
     
 	// public function render(string $fichier, array $data = []){
