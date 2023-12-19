@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+.main-title {
+    margin: 0;
+    background-color: chocolate;
+    padding: 10px;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.page nav {
+    background-color: bisque;
+    padding: 10px;
+    height: 89vh;
+}
+
+.page main {
+    flex-grow: 1;
+}
+
+#form-recipe {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.recipes-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.recipes-container .recipe {
+    flex-basis: 20%;
+}

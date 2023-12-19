@@ -48,7 +48,7 @@ class Utilisateur extends Controller {
             'username' => $_POST['username'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],
-            'role' => 'utilisateur',
+            'role' => 'user',
             'pfp' => null
         ];
         $this->User->insert($data);

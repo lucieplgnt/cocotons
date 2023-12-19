@@ -15,7 +15,7 @@ class User extends Model {
         $pfp = $data['pfp'] ?? null;
         $hash = $data['password'] ? password_hash($data['password'], PASSWORD_DEFAULT) : null;
 
-        $sql = "INSERT INTO utilisateur VALUES (0, :username, :email, :password, :role, :pfp)";
+        $sql = "INSERT INTO user VALUES (0, :username, :email, :password, :role, :pfp)";
         $query = $this->_connexion->prepare($sql);
         $query->bindParam(':username', $username);
         $query->bindParam(':email', $email);
