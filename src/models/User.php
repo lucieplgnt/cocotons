@@ -15,13 +15,28 @@ class User extends Model {
         $pfp = $data['pfp'] ?? null;
         $hash = $data['password'] ? password_hash($data['password'], PASSWORD_DEFAULT) : null;
 
-        $sql = "INSERT INTO user VALUES (0, :username, :email, :password, :role, :pfp)";
+        $sql = "INSERT INTO ".$this->table." VALUES (0, :username, :email, :password, :role, :pfp)";
         $query = $this->_connexion->prepare($sql);
         $query->bindParam(':username', $username);
         $query->bindParam(':email', $email);
         $query->bindParam(':password', $hash);
         $query->bindParam(':role', $role);
         $query->bindParam(':pfp', $pfp);
+        $query->execute();
+    }
+
+    public function update(array $data) {
+        $id = $data['id'] ?? null;
+        $email = $data['email'] ?? null;
+        $role = $data['role'] ?? null;
+        $pfp = $data['pfp'] ?? null;
+
+        $sql = "UPDATE ".$this->table." SET email=:email, role=:role, profile_picture=:pfp WHERE id=:id";
+        $query = $this->_connexion->prepare($sql);
+        $query->bindParam(':email', $email);
+        $query->bindParam(':role', $role);
+        $query->bindParam(':pfp', $pfp);
+        $query->bindParam(':id', $id);
         $query->execute();
     }
 
@@ -36,5 +51,21 @@ class User extends Model {
         }
 
         return false;
+    }
+
+    public function get($id){
+        $sql = "SELECT * FROM ".$this->table." WHERE id=:id";
+        $query = $this->_connexion->prepare($sql);
+        $query->bindParam(':id', $id);
+        $query->execute();
+        return $query->fetch();
+    }
+
+    public function delete($id) {
+        $sql = "DELETE FROM ".$this->table." WHERE id=:id";
+        $query = $this->_connexion->prepare($sql);
+        $query->bindParam(':id', $id);
+        $query->execute();
+        return $query->fetch();
     }
 }

@@ -6,6 +6,10 @@ class Backoffice extends Controller {
 	    $this->render('index', [], true);
 	}
 
+    /**
+     * Affichage de la liste des recettes pour l'utilisateur connecté
+     * @return void
+     */
     public function recettes() {
         $this->loadModel('Recipe');
 
@@ -19,7 +23,35 @@ class Backoffice extends Controller {
         $this->render('recettes', $data, true);
     }
 
-    public function ajouterrecette() {
+    /**
+     * Affichage de form de création/modification/suppression d'une recette
+     * @param $recipe_id
+     * @return void
+     */
+    public function modifierrecette($recipe_id) {
+        $this->loadModel('Category');
+        $categories = $this->Category->getAll();
+
+        $this->loadModel('Recipe');
+        $recipe = null;
+
+        if ($recipe_id != 0 && $recipe_id != "0") {
+            $recipe = $this->Recipe->get($recipe_id);
+        }
+
+        $data = [
+            'categories' => $categories,
+            'recipe' => $recipe
+        ];
+
+        $this->render('modifierrecette', $data, true);
+    }
+
+    /**
+     * Affichage de la liste des catégories
+     * @return void
+     */
+    public function categories() {
         $this->loadModel('Category');
         $categories = $this->Category->getAll();
 
@@ -27,33 +59,62 @@ class Backoffice extends Controller {
             'categories' => $categories
         ];
 
-        $this->render('ajouterrecette', $data, true);
+        $this->render('categories', $data, true);
     }
 
-    public function addrecipe() {
-        //Si c'est pas un post ne rien faire
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /cocotons/backoffice/recettes');
-            exit;
+    /**
+     * Affichage de la liste des utilisateurs
+     * @return void
+     */
+    public function utilisateurs() {
+        $this->loadModel('User');
+        $users = $this->User->getAll();
+
+        $data = [
+            'users' => $users
+        ];
+
+        $this->render('utilisateurs', $data, true);
+    }
+
+    /**
+     * Affichage de form de création/modification/suppression d'un utilisateur
+     * @param $user_id
+     * @return void
+     */
+    public function modifierutilisateur($user_id) {
+        $this->loadModel('User');
+        $user = null;
+
+        if ($user_id != 0 && $user_id != "0") {
+            $user = $this->User->get($user_id);
         }
 
+        $data = [
+            'user' => $user
+        ];
+
+        $this->render('modifierutilisateur', $data, true);
+    }
+
+    /**
+     * Affichage de la page de l'utilisateur connecté
+     * @return void
+     */
+    public function profil() {
         session_start();
 
-        $this->loadModel('Recipe');
+        if (isset($_SESSION['user_id'])) {
+            $user_id = $_SESSION['user_id'];
 
-        //Si on arrive ici c'est que le user_id de la session n'est pas null
-        $data = [
-            'title' => $_POST['title'],
-            'description' => $_POST['description'],
-            'content' => $_POST['content'],
-            'category' => $_POST['category'],
-            'author' => $_SESSION['user_id'],
-            'date' => (new DateTime())->format('Y-m-d'),
-            'image' => null
-        ];
-        $this->Recipe->insert($data);
+            $this->loadModel('User');
+            $user = $this->User->get($user_id);
 
-        header('Location: /cocotons/backoffice/recettes');
-        exit;
+            $data = [
+                'user' => $user
+            ];
+
+            $this->render('profil', $data, true);
+        }
     }
 }

@@ -6,9 +6,9 @@ if (!isset($_SESSION)) {
 
 $userLoggedIn = isset($_SESSION['user_id']);
 
-//Si pas connecté alors redirection à la page d'accueil
+//Si pas connecté alors redirection à la page de connexion
 if (!$userLoggedIn) {
-    header('Location: /cocotons');
+    header('Location: /cocotons/utilisateur/connexion');
     exit;
 }
 
@@ -20,12 +20,14 @@ if (!$userLoggedIn) {
 <section class="page">
     <nav>
         <ul>
+            <li><a href="/cocotons/backoffice/utilisateurs">Utilisateurs</a></li>
+            <li><a href="/cocotons/backoffice/categories">Catégories</a></li>
             <li><a href="/cocotons/backoffice/recettes">Recettes</a></li>
-            <li><a href="/cocotons">Mon compte</a></li>
+            <li><a href="/cocotons/backoffice/profil">Mon compte</a></li>
         </ul>
     </nav>
     <main>
-        <?= $content ?>
+        <?=$content ?>
     </main>
 </section>
 

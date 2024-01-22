@@ -64,4 +64,70 @@ class Utilisateur extends Controller {
         header('Location: /cocotons');
         exit;
     }
+
+    /**
+     * Méthode POST utilisée pour ajouter un utilisateur depuis le backoffice
+     * @return void
+     */
+    public function ajouter() {
+        //Si c'est pas un post ne rien faire
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            return;
+        }
+
+        $this->loadModel('User');
+        $data = [
+            'username' => $_POST['username'],
+            'email' => $_POST['email'],
+            'password' => $_POST['password'],
+            'role' => $_POST['role'],
+            'pfp' => null
+        ];
+        $this->User->insert($data);
+
+        header('Location: /cocotons/backoffice/utilisateurs');
+        exit;
+    }
+
+    /**
+     * Méthode POST utilisée pour modifier un utilisateur depuis le backoffice
+     * @return void
+     */
+    public function modifier() {
+        //Si c'est pas un post ne rien faire
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            return;
+        }
+
+        $this->loadModel('User');
+        $data = [
+            'id' => $_POST['user_id'],
+            'email' => $_POST['email'],
+            'role' => $_POST['role'],
+            'pfp' => null
+        ];
+        $this->User->update($data);
+
+        header('Location: /cocotons/backoffice/utilisateurs');
+        exit;
+    }
+
+    /**
+     * Methode POST de suppression d'un utilisateur
+     */
+    public function supprimer() {
+        //Si c'est pas un post ne rien faire
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            exit;
+        }
+
+        $user_id = $_POST['user_id'];
+
+        $this->loadModel('Recipe');
+
+        $this->Recipe->delete($user_id);
+
+        header('Location: /cocotons/backoffice/utilisateurs');
+        exit;
+    }
 }

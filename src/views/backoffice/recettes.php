@@ -5,8 +5,9 @@
         <div class="recipe">
             <h3><?=$recipe['title']?></h3>
             <p><?=$recipe['description']?></p>
+            <a href="/cocotons/backoffice/modifierrecette/<?=$recipe['id']?>">Modifier</a>
         </div>
     <?php endforeach; ?>
 </div>
 
-<a href="/cocotons/backoffice/ajouterrecette">Ajouter</a>
+<a href="/cocotons/backoffice/modifierrecette/0">Ajouter</a>
