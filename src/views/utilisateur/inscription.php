@@ -1,6 +1,6 @@
 <h1>S'inscrire</h1>
 
-<form action="/cocotons/utilisateur/register" method="POST">
+<form action="/utilisateur/register" method="POST">
     <label for="username">Pseudo :</label>
     <input type="text" name="username" required />
     <label for="email">Email :</label>

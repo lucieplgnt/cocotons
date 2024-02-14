@@ -8,7 +8,7 @@
     <?php endforeach; ?>
 </div>
 
-<form method="POST" action="/cocotons/categories/ajouter">
-    <input type="text" name="name" />
+<form method="POST" action="/categories/ajouter">
+    <input type="text" name="name" required />
     <button type="submit">Ajouter</button>
 </form>

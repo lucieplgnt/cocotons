@@ -6,9 +6,9 @@
             <h3><?=$user['username']?></h3>
             <p>email : <?=$user['email']?></p>
             <p>role : <?=$user['role']?></p>
-            <a href="/cocotons/backoffice/modifierutilisateur/<?=$user['id']?>">Modifier</a>
+            <a href="/backoffice/modifierutilisateur/<?=$user['id']?>">Modifier</a>
         </div>
     <?php endforeach; ?>
 </div>
 
-<a href="/cocotons/backoffice/modifierutilisateur/0">Ajouter</a>
+<a href="/backoffice/modifierutilisateur/0">Ajouter</a>

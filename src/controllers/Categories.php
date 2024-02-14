@@ -8,7 +8,7 @@ class Categories extends Controller {
     public function ajouter() {
         //Si c'est pas un post ne rien faire
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /cocotons/backoffice/categories');
+            header('Location: /backoffice/categories');
             exit;
         }
 
@@ -16,7 +16,7 @@ class Categories extends Controller {
 
         $this->Category->insert($_POST['name']);
 
-        header('Location: /cocotons/backoffice/categories');
+        header('Location: /backoffice/categories');
         exit;
     }
 }

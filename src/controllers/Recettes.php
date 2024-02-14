@@ -8,7 +8,7 @@ class Recettes extends Controller {
     public function ajouter() {
         //Si c'est pas un post ne rien faire
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /cocotons/backoffice/recettes');
+            header('Location: /backoffice/recettes');
             exit;
         }
 
@@ -26,9 +26,11 @@ class Recettes extends Controller {
             'date' => (new DateTime())->format('Y-m-d'),
             'image' => null
         ];
+        
         $this->Recipe->insert($data);
 
-        header('Location: /cocotons/backoffice/recettes');
+        header('Location: /backoffice/recettes');
+        
         exit;
     }
 
@@ -38,7 +40,7 @@ class Recettes extends Controller {
     public function modifier() {
         //Si c'est pas un post ne rien faire
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /cocotons/backoffice/recettes');
+            header('Location: /backoffice/recettes');
             exit;
         }
 
@@ -56,7 +58,7 @@ class Recettes extends Controller {
         ];
         $this->Recipe->update($data);
 
-        header('Location: /cocotons/backoffice/recettes');
+        header('Location: /backoffice/recettes');
         exit;
     }
 
@@ -66,7 +68,7 @@ class Recettes extends Controller {
     public function supprimer() {
         //Si c'est pas un post ne rien faire
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /cocotons/backoffice/recettes');
+            header('Location: /backoffice/recettes');
             exit;
         }
 
@@ -76,7 +78,7 @@ class Recettes extends Controller {
 
         $this->Recipe->delete($recipe_id);
 
-        header('Location: /cocotons/backoffice/recettes');
+        header('Location: /backoffice/recettes');
         exit;
     }
 }

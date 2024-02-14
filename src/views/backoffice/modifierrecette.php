@@ -1,6 +1,6 @@
 <h1><?=$recipe ? 'Modifier' : 'Ajouter'?> une recette</h1>
 
-<form id="form-recipe" action="/cocotons/recettes/<?=$recipe ? 'modifier' : 'ajouter'?>" method="POST">
+<form id="form-recipe" action="/recettes/<?=$recipe ? 'modifier' : 'ajouter'?>" method="POST">
     <input type="hidden" name="recipe_id" value="<?=$recipe['id'] ?>" />
     <label for="title">Titre :</label>
     <input type="text" name="title" value="<?=$recipe ? $recipe['title'] : ""?>" />
@@ -26,7 +26,7 @@
     <Button type="submit"><?=$recipe ? 'Modifier' : 'Ajouter'?></Button>
 </form>
 <?php if ($recipe): ?>
-<form id="detele-form" action="/cocotons/recettes/supprimer" method="POST">
+<form id="detele-form" action="/recettes/supprimer" method="POST">
     <input type="hidden" name="recipe_id" value="<?=$recipe['id'] ?>" />
     <Button type="submit">Supprimer</Button>
 </form>

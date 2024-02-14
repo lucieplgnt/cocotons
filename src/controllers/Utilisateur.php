@@ -17,7 +17,7 @@ class Utilisateur extends Controller {
     public function connect() {
         //Si c'est pas un post ne rien faire
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /cocotons/utilisateur/connexion');
+            header('Location: /utilisateur/connexion');
             exit;
         }
 
@@ -29,11 +29,11 @@ class Utilisateur extends Controller {
         if ($user_id) {
             session_start();
             $_SESSION['user_id'] = $user_id;
-            header('Location: /cocotons');
+            header('Location: /');
             exit;
         }
 
-        header('Location: /cocotons/utilisateur/connexion');
+        header('Location: /utilisateur/connexion');
         exit;
     }
 
@@ -53,7 +53,7 @@ class Utilisateur extends Controller {
         ];
         $this->User->insert($data);
 
-        header('Location: /cocotons');
+        header('Location: /');
         exit;
     }
 
@@ -61,7 +61,7 @@ class Utilisateur extends Controller {
         session_start();
         unset($_SESSION['user_id']);
 
-        header('Location: /cocotons');
+        header('Location: /');
         exit;
     }
 
@@ -85,7 +85,7 @@ class Utilisateur extends Controller {
         ];
         $this->User->insert($data);
 
-        header('Location: /cocotons/backoffice/utilisateurs');
+        header('Location: /backoffice/utilisateurs');
         exit;
     }
 
@@ -108,7 +108,7 @@ class Utilisateur extends Controller {
         ];
         $this->User->update($data);
 
-        header('Location: /cocotons/backoffice/utilisateurs');
+        header('Location: /backoffice/utilisateurs');
         exit;
     }
 
@@ -127,7 +127,7 @@ class Utilisateur extends Controller {
 
         $this->Recipe->delete($user_id);
 
-        header('Location: /cocotons/backoffice/utilisateurs');
+        header('Location: /backoffice/utilisateurs');
         exit;
     }
 }

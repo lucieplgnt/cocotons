@@ -1,6 +1,6 @@
 <h1>Ajouter une recette</h1>
 
-<form id="form-recipe" action="/cocotons/backoffice/addrecipe" method="POST">
+<form id="form-recipe" action="/backoffice/addrecipe" method="POST">
     <label for="title">Titre :</label>
     <input type="text" name="title" />
     <label for="category">Catégorie :</label>

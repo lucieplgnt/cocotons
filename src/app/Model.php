@@ -2,10 +2,10 @@
 
 abstract class Model {
     // Informations de la base de données
-    private $host = "localhost";
-    private $db_name = "db_cocotons";
-    private $username = "root";
-    private $password = "";
+    private $host = "mysql";
+    private $db_name = "cocotons";
+    private $username = "cocotons";
+    private $password = "cocotons";
 
     // Propriété qui contiendra l'instance de la connexion
     protected $_connexion;

@@ -18,15 +18,16 @@ class Recipe extends Model {
         $date = $data['date'] ?? null;
         $image = $data['image'] ?? null;
 
-        $sql = "INSERT INTO recipe VALUES (0, :title, :description, :content, :author, :category, :date, :image)";
+        $sql = "INSERT INTO recipe VALUES (0, :title, :description, :content, :date, :image, :author, :category)";
         $query = $this->_connexion->prepare($sql);
         $query->bindParam(':title', $title);
         $query->bindParam(':description', $description);
         $query->bindParam(':content', $content);
-        $query->bindParam(':author', $author);
-        $query->bindParam(':category', $category);
         $query->bindParam(':date', $date);
         $query->bindParam(':image', $image);
+        $query->bindParam(':author', $author);
+        $query->bindParam(':category', $category);
+        
         $query->execute();
     }
 

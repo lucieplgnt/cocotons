@@ -1,6 +1,6 @@
 <h1><?=$user ? 'Modifier' : 'Ajouter'?> un utilisateur</h1>
 
-<form id="form-recipe" action="/cocotons/utilisateur/<?=$user ? 'modifier' : 'ajouter'?>" method="POST">
+<form id="form-recipe" action="/utilisateur/<?=$user ? 'modifier' : 'ajouter'?>" method="POST">
     <input type="hidden" name="user_id" value="<?=$user['id'] ?>" />
 
     <label for="username">Pseudo :</label>
@@ -18,7 +18,7 @@
     <Button type="submit"><?=$user ? 'Modifier' : 'Ajouter'?></Button>
 </form>
 <?php if ($user): ?>
-<form id="detele-form" action="/cocotons/utilisateur/supprimer" method="POST">
+<form id="detele-form" action="/utilisateur/supprimer" method="POST">
     <input type="hidden" name="user_id" value="<?=$user['id'] ?>" />
     <Button type="submit">Supprimer</Button>
 </form>
