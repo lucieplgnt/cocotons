@@ -1,0 +1,107 @@
+/* Conteneur de la page de connexion */
+.signin-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligner horizontalement à droite */
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.signin-container::before {
+    content: "";
+    background: var(--secondary); /* Background avec opacité */
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Image décorative */
+.decorative-image {
+    background-image: url('../../assets/img/recette-1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 30%; /* Ajustez selon vos besoins */
+    height: 100%;
+    position: absolute;
+    border-top-right-radius: 60rem;
+    border-bottom-right-radius: 60rem ;
+    left: 0;
+    top: 0;
+    z-index: 1; /* Assurez-vous que l'image est derrière le formulaire */
+}
+
+
+
+/* Formulaire de connexion */
+.signin-form {
+    width: 40%;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    background: transparent; /* Fond transparent */
+    position: relative;
+    margin-right: 20%; /* Espace sur le côté droit */
+}
+
+.signin-form h1 {
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 5rem;
+    font-size: 5rem;
+}
+
+.title {
+    margin-bottom: 12rem;
+}
+
+.signin-form p {
+    font-family: var(--font-family);
+    font-size: 1.7rem;
+}
+
+.form-group {
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligner horizontalement au centre */
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: var(--font-family);
+}
+
+.form-group input {
+    width: calc(100% - 2rem);
+    padding: 1.5rem;
+    border: 2px solid var(--secondary);
+    border-radius: 30px;
+}
+
+.signin-button {
+    width: calc(100% - 2rem);
+    padding: 1.5rem;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 1rem; /* Espacement depuis les champs de saisie */
+    font-size: 2rem;
+    font-family: var(--font-family);
+}
+
+.btn-container {
+    display: flex;
+    gap: 3rem;
+}

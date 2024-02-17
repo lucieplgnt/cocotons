@@ -1,0 +1,200 @@
+.side-bar-elements a.mes-recettes-style {
+  color: var(--secondary);
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 40rem;
+    opacity: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+  }
+  
+  .img-mettre {
+    font-size: 10rem;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 3rem;
+    background-color: white;
+    color: var(--secondary);
+  }
+
+
+.recette-title {
+    display: flex;
+    gap: 2rem;
+    font-family: var(--font-family);
+    font-size: 4rem;
+    margin: 3rem 0;
+    color: gray;
+    text-align: center;
+  }
+
+  .edit-icon {
+    font-size: 3rem;
+    padding-top: 1.5rem;
+    margin-left: 4rem;
+    color: var(--text-color);
+}
+
+.etoile {
+    font-size: 1.8rem;
+    width: 80%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.recette-introduction {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-text-area {
+    font-size: 2.2rem;
+    color: var(--secondary);
+}
+
+.recette-inf {
+    display: flex;
+    gap: 3rem;
+    margin: 5rem 0;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-input {
+    font-size: 1rem;
+    color: var(--secondary);
+    padding: 8px;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    width: 70px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.information-input:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-label {
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-top: 0.5rem;
+}
+
+/* Styles pour les icônes et les informations */
+.inf-icon {
+    font-size: 5rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.information {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    text-align: center;
+    margin: 0;
+}
+
+
+.ingredients-container {
+    width: 50rem;
+    margin: 50px auto;
+    text-align: start;
+}
+
+.input-theme {
+    font-size: 1.8rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--background-color);
+}
+
+.input-theme:focus {
+    border: none; 
+}
+
+.border-input {
+    border: 4px solid var(--secondary);
+    opacity: 80%;
+    border-radius: 10px;
+    margin: 0;
+}
+
+
+.border-text-area {
+    border: 4px solid var(--secondary);
+    opacity: 80%;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.paragraph-theme {
+    font-size: 2.2rem;
+    color: var(--secondary);
+    margin: 0.5rem 0;
+    text-align: start;
+}
+
+
+.ingredient-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.ingredient-bubble {
+    font-size: 1.8rem;
+    color: gray;
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    border-radius: 50px;
+    padding: 5px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.supprimer-ingredient {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    font-family: none;
+}
+
+.button-theme-outline {
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    border: 2px solid var(--secondary);
+    border-radius: 50px;
+    color: var(--secondary);
+    cursor: pointer;
+    background-color: transparent;
+    margin: 1rem;
+}
+
+.categorie-container {
+    display: flex;
+    gap: 4rem;
+    justify-content: flex-start;
+    margin: 5rem 0;
+}
+
+/* Si vous avez besoin d'autres styles spécifiques pour la catégorie */

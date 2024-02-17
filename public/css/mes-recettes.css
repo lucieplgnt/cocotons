@@ -1,0 +1,49 @@
+.tri {
+  margin-top: 5rem;
+  align-self: flex-start;
+}
+
+.tri p {
+  font-size: 2rem;
+}
+.tri p a {
+  opacity: 50%;
+  padding-left: 10px;
+}
+
+
+.filtre {
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.filtre-element {
+  color: gray;
+  border: 2px solid var(--primary);
+  border-radius: 40px;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+.filtre-img {
+    height: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0 0.5rem;
+    color: gray;
+}
+
+.btn-add {
+    margin-left: auto;
+    margin-right: 10rem;
+    margin-top: 5rem;
+}
+
+.add-recette {
+    font-size: 9rem;
+    color: var(--secondary);
+}
