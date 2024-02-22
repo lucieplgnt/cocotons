@@ -29,3 +29,5 @@ CREATE TABLE IF NOT EXISTS `user` (
   `role` varchar(50) NOT NULL,
   `profile_picture` longblob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO user VALUES (1, 'admin', 'admin@admin.fr', '$2y$10$peoqTbUqnnTh6Fje26JC6up9R/wrEpF6TiHBtHNFBYNDb8Tr1I3c2', 'admin', NULL);

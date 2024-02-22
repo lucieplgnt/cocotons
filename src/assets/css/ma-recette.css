@@ -1,0 +1,60 @@
+.side-bar-elements a.mes-recettes-style {
+  color: var(--secondary);
+}
+
+.img-recette {
+  width: 100%;
+  height: 40rem;
+  margin: -1.2rem;
+  padding: 0;
+  object-fit: cover;
+}
+
+.recette-title {
+    display: flex;
+    gap: 2rem;
+    font-family: var(--font-family);
+    font-size: 4rem;
+    margin: 3rem 0;
+  }
+
+.edit-icon {
+    font-size: 3rem;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+}
+
+.recette-description {
+    font-size: 1.8rem;
+    width: 80%;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.recette-inf {
+    display: flex;
+    gap: 6rem;
+    margin-bottom: 5rem;
+}
+
+
+.inf-icon {
+    font-size: 5rem;
+    color: var(--secondary);
+}
+
+.information {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.recette-ingredient {
+    font-size: 4rem;
+    color: var(--secondary);
+}
+
+.list-ingredient {
+    font-size: 1.5rem;
+}

@@ -13,7 +13,7 @@ class User extends Model {
         $email = $data['email'] ?? null;
         $role = $data['role'] ?? null;
         $pfp = $data['pfp'] ?? null;
-        $hash = $data['password'] ? password_hash($data['password'], PASSWORD_DEFAULT) : null;
+        $hash = $data['password'] ? password_hash($data['password'], c) : null;
 
         $sql = "INSERT INTO ".$this->table." VALUES (0, :username, :email, :password, :role, :pfp)";
         $query = $this->_connexion->prepare($sql);
@@ -46,7 +46,7 @@ class User extends Model {
         $query->bindParam(':username', $username);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
-        if (password_verify($password, $result['password'])) {
+        if ($result && password_verify($password, $result['password'])) {
             return $result['id'];
         }
 

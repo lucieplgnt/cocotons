@@ -1,0 +1,17 @@
+
+
+.tri {
+  margin-top: 5rem;
+  align-self: flex-start;
+}
+
+.tri p {
+  font-size: 2rem;
+}
+.tri p a {
+  opacity: 50%;
+  padding-left: 10px;
+}
+
+
+

@@ -1,0 +1,68 @@
+/* administration */
+
+.moyenne-container .moyenne {
+  font-size: 3.5rem;
+}
+
+.separator {
+  margin: 3rem 0;
+}
+
+.info-profil {
+  margin-top: 2rem;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  margin-left: 4rem;
+}
+
+.email input {
+  background-color: var(--background-color);
+  border: none;
+  font-family: var(--font-family);
+  font-size: 3rem;
+  margin: 0 1rem;
+  outline: none; 
+}
+
+.password input {
+  background-color: var(--background-color);
+  border: none;
+  font-size: 3rem;
+  margin: 0 1rem;
+  outline: none; 
+}
+
+.edit-svg {
+    height: 3rem;
+    width: 3rem;
+}
+
+.supprimer {
+    margin: 10rem 0;
+    padding: 1rem 4rem;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    font-family: var(--font-family);
+    border-radius: 40px;
+    font-size: 2rem;
+}
+
+.img-profil {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0;
+}
+
+.nom-profil {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0;
+}
+
+#modify-name {
+  margin: 0 1rem;
+  padding-top: 1rem;
+}
+
